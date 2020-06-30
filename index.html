@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>resturantsApp</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel='stylesheet' type='text/css' media='screen' href='css/styles.css'>
+
+</head>
+<body>
+    <div class="container-fluid">
+        <h1 class="text-white text-center" id="title">resturants app</h1>
+        <div id="inner-container">
+            <form class="form" id="resturants-form">
+              <div class="row" style="width:100%;">
+                  <input type="text" class="col-sm-12 col-lg-5 col-md-5" placeholder="name" name="name" required>
+                  <input type="text" class="col-sm-12 col-lg-5 col-md-5" id="inputPassword2" name="city" placeholder="city" required>
+                  <button type="submit" class="btn btn-danger col-sm-12 col-lg-2 col-md-2" id="submit-button">add resturant</button>
+              </div>
+
+              </form>
+
+              <!-- resturant add -->
+              <ul class="list-group" id="resturants-list">
+                
+              </ul>
+
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <!-- firebase -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-firestore.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyDEtYaiylRQQLHrq4V1RFvqqL8HUsejhS4",
+        authDomain: "resturants-app.firebaseapp.com",
+        databaseURL: "https://resturants-app.firebaseio.com",
+        projectId: "resturants-app",
+        storageBucket: "resturants-app.appspot.com",
+        messagingSenderId: "1069876019320",
+        appId: "1:1069876019320:web:abc12a370061e34fbb2d8d"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    let db = firebase.firestore();
+    </script>
+    <!-- end -->
+    
+    <script src="app.js"></script>
+</body>
+</html>
